@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, TouchableHighlight, Platform } from 'react-native';
+import { StyleSheet, Text, TouchableHighlight, Platform, ViewPropTypes } from 'react-native';
 
 function MenuItem({
   children,
@@ -41,9 +41,9 @@ MenuItem.propTypes = {
   disabled: PropTypes.bool,
   disabledTextColor: PropTypes.string,
   onPress: PropTypes.func,
-  style: TouchableHighlight.propTypes.style,
+  style: ViewPropTypes.style,
   textStyle: Text.propTypes.style,
-  underlayColor: TouchableHighlight.propTypes.underlayColor,
+  underlayColor: PropTypes.string
 };
 
 MenuItem.defaultProps = {
